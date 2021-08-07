@@ -1,0 +1,16 @@
+int Solution::removeElement(vector<int> &A, int val) {
+   int i=0, x=0;
+   int n=A.size();
+   while(i<n)
+   {
+       if(A[i]==val)
+       i++;
+       else
+       {
+           A[x]=A[i];
+           x++;
+           i++;
+       }
+   }
+    return x;
+}
