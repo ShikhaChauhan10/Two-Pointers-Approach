@@ -1,0 +1,15 @@
+int Solution::maxArea(vector<int> &A) {
+    int s=0;
+    int e=A.size()-1;
+    int max_area=0;
+    while(s<e)
+    {
+        max_area=max(max_area,min(A[s],A[e])*(e-s));
+        if(A[s]>A[e])
+        e--;
+        else
+        s++;
+    }
+    
+    return max_area;
+}
